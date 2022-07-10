@@ -1,0 +1,7 @@
+{
+  "name": "parcial2_ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
