@@ -12,7 +12,7 @@ import{
 } from "@ionic/react"
 import List from "../components/List";
 import UseApi from "../components/UseApi";
-
+import "./Home.css"
 
 const Home: React.FC = () => {
     const {data, refetch} = UseApi(`${process.env.REACT_APP_API_URL}/contents`);
