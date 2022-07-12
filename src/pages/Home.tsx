@@ -34,10 +34,10 @@ const Home: React.FC = () => {
                 <IonContent>
                     {data?.map((content: any) => {
                         return (
-                            <IonCard key={content?.name}>
+                            <IonCard className="Card__Color" key={content?.name}>
                             <IonCardHeader>
-                            <IonCardTitle >{content?.name}</IonCardTitle>
-                                <IonCardSubtitle >{content?.description}</IonCardSubtitle>
+                            <IonCardTitle className="Content__Name" >Nombre: {content?.name}</IonCardTitle>
+                                <IonCardSubtitle className="Content__Desc" >Descripcion: {content?.description}</IonCardSubtitle>
                                 
                             </IonCardHeader>  
                         </IonCard>
