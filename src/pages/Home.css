@@ -1,0 +1,21 @@
+.Joke_Color {
+    color: red;
+
+}
+
+.Joke_Category {
+    color: green;
+}
+
+.Joke_Delivery {
+
+    color: orange;
+}
+
+.Joke_Card {
+    background: white;
+}
+
+.Joke_Refresh {
+    color: black;
+}
