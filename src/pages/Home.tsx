@@ -8,7 +8,7 @@ import './Home.css'
 
 const Home: React.FC = () => {
   const url = process.env.REACT_APP_API_URL
-  const { data } = UseApi(`${url}/special_contents`)
+  const { data } = UseApi(`${url}/contents`)
 
   if (!data) return <h1> Cargando...</h1>
 

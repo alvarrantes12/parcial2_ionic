@@ -2,7 +2,7 @@ import {
   IonCard,
   IonCardContent,
   IonCardHeader,
-  IonCardTitle,
+  IonCardSubtitle,
   IonItem,
   IonList,
   IonText,
@@ -19,16 +19,27 @@ const List = ({ data }: Props) => {
       {data?.map((content: any) => {
         return (
           <IonItem key={`${content?.id}`}>
-            <IonCard class='content-card'>
+            <IonCard
+              color='dark'
+              style={{
+                minWidth: '80%',
+                marginRight: 'auto',
+                marginLeft: 'auto',
+              }}
+            >
               <IonCardHeader>
-                <IonCardTitle class='content-name'>
-                  {content?.name}
-                </IonCardTitle>
+                <IonCardSubtitle>Content</IonCardSubtitle>
               </IonCardHeader>
-              <IonCardContent>
-                <IonText class='content-description'>
-                  {content?.description}
-                </IonText>
+              <IonCardContent
+                style={{
+                  display: "flex",
+                  flexDirection: "column"
+                }}
+              >
+                {Object.keys(content).map((key) => {
+                  if (key === 'id') return null
+                  return <IonText color='light'>{content[key]}</IonText>
+                })}
               </IonCardContent>
             </IonCard>
           </IonItem>
