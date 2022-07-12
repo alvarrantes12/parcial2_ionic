@@ -2,6 +2,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
+import FormGet from '../components/FormGet'
 
 const Page: React.FC = () => {
 
@@ -24,7 +25,8 @@ const Page: React.FC = () => {
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+        {/*<ExploreContainer name={name} /> */}
+        <FormGet />
       </IonContent>
     </IonPage>
   );
