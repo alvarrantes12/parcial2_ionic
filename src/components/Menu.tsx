@@ -13,6 +13,7 @@ import {
 import { useLocation } from 'react-router-dom';
 import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 import './Menu.css';
+import Home from './ShowList'
 
 interface AppPage {
   url: string;
@@ -77,7 +78,7 @@ const Menu: React.FC = () => {
                 <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                   <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                   <IonLabel>{appPage.title}</IonLabel>
-                </IonItem>
+                </IonItem>              
               </IonMenuToggle>
             );
           })}
@@ -91,6 +92,7 @@ const Menu: React.FC = () => {
               <IonLabel>{label}</IonLabel>
             </IonItem>
           ))}
+          
         </IonList>
       </IonContent>
     </IonMenu>

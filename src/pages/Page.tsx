@@ -1,6 +1,7 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
+import Home from '../components/ShowList';
 import './Page.css';
 
 const Page: React.FC = () => {
@@ -22,9 +23,11 @@ const Page: React.FC = () => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">{name}</IonTitle>
+            <Home/>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+        <Home/>
+
       </IonContent>
     </IonPage>
   );
